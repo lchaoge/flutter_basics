@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basics/demo/listview_demo.dart';
 import 'package:flutter_basics/demo/bottom_navigation_bar_demo.dart';
 import 'package:flutter_basics/demo/basic_demo.dart';
-
+import 'package:flutter_basics/demo/drawer_demo.dart';
+import 'package:flutter_basics/demo/layout_demo.dart';
 void main() => runApp(App());
 
 class App extends StatelessWidget {
@@ -60,79 +61,10 @@ class Home extends StatelessWidget {
             children: <Widget>[
               ListViewDemo(),
               BasicDemo(),
-              // Icon(
-              //   Icons.change_history,
-              //   size: 128.0,
-              //   color: Colors.black12,
-              // ),
-              Icon(
-                Icons.directions_bike,
-                size: 128.0,
-                color: Colors.black12,
-              ),
+              LayoutDemo(),
             ],
           ),
-          drawer: Drawer(
-            child: ListView(
-              padding: EdgeInsets.zero,
-              children: <Widget>[
-                UserAccountsDrawerHeader(
-                  accountName: Text('chaoge',
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                  accountEmail: Text('13260094140@163.com'),
-                  currentAccountPicture: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        'http://i0.hdslb.com/bfs/face/452cef1ba6dd594d4c11ac19a633e747bed93acd.jpg@52w_52h.webp'),
-                  ),
-                  decoration: BoxDecoration(
-                      color: Colors.yellow[400],
-                      image: DecorationImage(
-                          image: NetworkImage(
-                              'http://ww1.sinaimg.cn/large/663d3650gy1fplwwcynw2j20p00b4js9.jpg'),
-                          fit: BoxFit.cover,
-                          colorFilter: ColorFilter.mode(
-                              Colors.yellow[400].withOpacity(0.6),
-                              BlendMode.hardLight))),
-                ),
-                ListTile(
-                  title: Text(
-                    'Messages',
-                    textAlign: TextAlign.right,
-                  ),
-                  trailing: Icon(
-                    Icons.message,
-                    color: Colors.black12,
-                    size: 22.0,
-                  ),
-                  onTap: () => Navigator.pop(context),
-                ),
-                ListTile(
-                  title: Text(
-                    'Favorite',
-                    textAlign: TextAlign.right,
-                  ),
-                  trailing: Icon(
-                    Icons.favorite,
-                    color: Colors.black12,
-                    size: 22.0,
-                  ),
-                  onTap: () => Navigator.pop(context),
-                ),
-                ListTile(
-                  title: Text(
-                    'Settings',
-                    textAlign: TextAlign.right,
-                  ),
-                  trailing: Icon(
-                    Icons.settings,
-                    color: Colors.black12,
-                    size: 22.0,
-                  ),
-                  onTap: () => Navigator.pop(context),
-                ),
-              ],
-            ),
-          ),
+          drawer: DrawerDemo(),
           bottomNavigationBar: BottomNavigationBarDemo()),
     );
   }
