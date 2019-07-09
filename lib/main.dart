@@ -8,6 +8,7 @@ import 'package:flutter_basics/demo/view_demo.dart';
 import 'package:flutter_basics/demo/sliver_demo.dart';
 import 'package:flutter_basics/demo/navigator_demo.dart';
 import 'package:flutter_basics/demo/form_demo.dart';
+import 'package:flutter_basics/demo/material_components.dart';
 
 void main() => runApp(App());
 
@@ -23,13 +24,14 @@ class App extends StatelessWidget {
           accentColor: Color.fromRGBO(3, 54, 255, 1.0),
         ),
       // home: NavigatorDemo(),
-      initialRoute: '/form',
+      initialRoute: '/mdc',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(
               title: 'about',
             ),
-        '/form':(context)=>FormDemo()
+        '/form':(context)=>FormDemo(),
+        '/mdc':(context)=>MaterialComponents(),
       },
     );
   }
