@@ -6,6 +6,7 @@ import 'package:flutter_basics/demo/drawer_demo.dart';
 import 'package:flutter_basics/demo/layout_demo.dart';
 import 'package:flutter_basics/demo/view_demo.dart';
 import 'package:flutter_basics/demo/sliver_demo.dart';
+import 'package:flutter_basics/demo/navigator_demo.dart';
 
 void main() => runApp(App());
 
@@ -13,12 +14,20 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-            primarySwatch: Colors.blue,
-            highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
-            splashColor: Colors.white70),
-        home: Home());
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          primarySwatch: Colors.blue,
+          highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+          splashColor: Colors.white70),
+      // home: NavigatorDemo(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Home(),
+        '/about': (context) => Page(
+              title: 'about',
+            )
+      },
+    );
   }
 }
 
