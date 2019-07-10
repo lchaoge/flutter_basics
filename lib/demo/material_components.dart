@@ -13,6 +13,8 @@ import 'package:flutter_basics/demo/alert_dialog_demo.dart';
 import 'package:flutter_basics/demo/bottom_sheet_demo.dart';
 import 'package:flutter_basics/demo/snack_bar_demo.dart';
 import 'package:flutter_basics/demo/expansion_panel_demo.dart';
+import 'package:flutter_basics/demo/chip_demo.dart';
+import 'package:flutter_basics/demo/data_table_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -24,6 +26,8 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(title: 'DataTable', page: DataTableDemo()),
+          ListItem(title: 'Chip', page: ChipDemo()),
           ListItem(title: 'ExpansionPanel', page: ExpansionPanelDemo()),
           ListItem(title: 'SnackBar', page: SnackBarDemo()),
           ListItem(title: 'BottomSheet', page: BottomSheetDemo()),
@@ -39,31 +43,6 @@ class MaterialComponents extends StatelessWidget {
           ListItem(title: 'PopupMenuButton', page: PopupMenuButtonDemo()),
           ListItem(title: 'FlatingActionButton', page: FlatingActionButtonDemo())
         ],
-      ),
-    );
-  }
-}
-
-
-class _WidgetDemo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('_WidgetDemo'),
-        elevation: 0.0,
-      ),
-      body: Container(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[],
-            )
-          ],
-        ),
       ),
     );
   }
