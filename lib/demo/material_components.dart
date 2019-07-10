@@ -8,6 +8,11 @@ import 'package:flutter_basics/demo/radio_demo.dart';
 import 'package:flutter_basics/demo/switch_demo.dart';
 import 'package:flutter_basics/demo/slider_demo.dart';
 import 'package:flutter_basics/demo/datetime_demo.dart';
+import 'package:flutter_basics/demo/simple_dialog_demo.dart';
+import 'package:flutter_basics/demo/alert_dialog_demo.dart';
+import 'package:flutter_basics/demo/bottom_sheet_demo.dart';
+import 'package:flutter_basics/demo/snack_bar_demo.dart';
+import 'package:flutter_basics/demo/expansion_panel_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -19,6 +24,11 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(title: 'ExpansionPanel', page: ExpansionPanelDemo()),
+          ListItem(title: 'SnackBar', page: SnackBarDemo()),
+          ListItem(title: 'BottomSheet', page: BottomSheetDemo()),
+          ListItem(title: 'AlertDialog', page: AlertDialogDemo()),
+          ListItem(title: 'SimpleDialog', page: SimpleDialogDemo()),
           ListItem(title: 'DateTime', page: DateTimeDemo()),
           ListItem(title: 'Slider', page: SliderDemo()),
           ListItem(title: 'Switch', page: SwitchDemo()),
@@ -27,8 +37,7 @@ class MaterialComponents extends StatelessWidget {
           ListItem(title: 'Button', page: ButtonDemo()),
           ListItem(title: 'Form', page: FormDemo()),
           ListItem(title: 'PopupMenuButton', page: PopupMenuButtonDemo()),
-          ListItem(
-              title: 'FlatingActionButton', page: FlatingActionButtonDemo())
+          ListItem(title: 'FlatingActionButton', page: FlatingActionButtonDemo())
         ],
       ),
     );
