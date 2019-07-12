@@ -11,11 +11,11 @@ class FlatingActionButtonDemo extends StatelessWidget {
     // ),
   );
 
-  final Widget _floatingActionButtonExtended = FloatingActionButton.extended(
-    onPressed: () {},
-    icon: Icon(Icons.add),
-    label: Text('add'),
-  );
+  // final Widget _floatingActionButtonExtended = FloatingActionButton.extended(
+  //   onPressed: () {},
+  //   icon: Icon(Icons.add),
+  //   label: Text('add'),
+  // );
 
   @override
   Widget build(BuildContext context) {

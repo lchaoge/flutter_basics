@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
 
 class ExpansionPanelItem{
   final String headerText;
@@ -23,7 +22,6 @@ class _ExpansionPanelDemoState extends State<ExpansionPanelDemo> {
 
   @override
     void initState() {
-      // TODO: implement initState
       super.initState();
       _expansionPanelItems = <ExpansionPanelItem>[
         ExpansionPanelItem(

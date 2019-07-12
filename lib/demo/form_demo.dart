@@ -35,7 +35,6 @@ class _TextFieldDemoState extends State<TextFieldDemo> {
   @override
   void dispose() {
     textEditingController.dispose();
-    // TODO: implement dispose
     super.dispose();
   }
 
@@ -45,7 +44,6 @@ class _TextFieldDemoState extends State<TextFieldDemo> {
     textEditingController.addListener(() {
       debugPrint('input:${textEditingController.text}');
     });
-    // TODO: implement initState
     super.initState();
   }
 

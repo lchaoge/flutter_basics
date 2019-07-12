@@ -31,6 +31,5 @@ class _BottomNavigationBarDemoState extends State<BottomNavigationBarDemo> {
         BottomNavigationBarItem(icon: Icon(Icons.person), title: Text('My')),
       ],
     );
-    ;
   }
 }

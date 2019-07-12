@@ -15,6 +15,9 @@ import 'package:flutter_basics/demo/snack_bar_demo.dart';
 import 'package:flutter_basics/demo/expansion_panel_demo.dart';
 import 'package:flutter_basics/demo/chip_demo.dart';
 import 'package:flutter_basics/demo/data_table_demo.dart';
+import 'package:flutter_basics/demo/paginated_data_table_demo.dart';
+import 'package:flutter_basics/demo/card_demo.dart';
+import 'package:flutter_basics/demo/stepper_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -26,6 +29,9 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(title: 'Stepper', page: StepperDemo()),
+          ListItem(title: 'Card', page: CardDemo()),
+          ListItem(title: 'PaginatedDataTable', page: PaginatedDataTableDemo()),
           ListItem(title: 'DataTable', page: DataTableDemo()),
           ListItem(title: 'Chip', page: ChipDemo()),
           ListItem(title: 'ExpansionPanel', page: ExpansionPanelDemo()),
