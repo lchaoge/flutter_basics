@@ -10,6 +10,8 @@ import 'package:flutter_basics/demo/navigator_demo.dart';
 import 'package:flutter_basics/demo/form_demo.dart';
 import 'package:flutter_basics/demo/material_components.dart';
 import 'package:flutter_basics/demo/http/http_demo.dart';
+import 'package:flutter_basics/demo/animation/animation_demo.dart';
+
 
 void main() => runApp(App());
 
@@ -25,7 +27,7 @@ class App extends StatelessWidget {
           accentColor: Color.fromRGBO(3, 54, 255, 1.0),
         ),
       // home: NavigatorDemo(),
-      initialRoute: '/http',
+      initialRoute: '/animation',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(
@@ -35,6 +37,7 @@ class App extends StatelessWidget {
         '/mdc':(context)=>MaterialComponents(),
 
         '/http':(context)=>HttpDemo(),
+        '/animation':(context)=>AnimationDemo(),
       },
     );
   }
