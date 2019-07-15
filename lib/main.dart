@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_basics/demo/listview_demo.dart';
 import 'package:flutter_basics/demo/bottom_navigation_bar_demo.dart';
 import 'package:flutter_basics/demo/basic_demo.dart';
@@ -11,7 +12,8 @@ import 'package:flutter_basics/demo/form_demo.dart';
 import 'package:flutter_basics/demo/material_components.dart';
 import 'package:flutter_basics/demo/http/http_demo.dart';
 import 'package:flutter_basics/demo/animation/animation_demo.dart';
-
+import 'package:flutter_basics/demo/i18n/i18n_demo.dart';
+import 'package:flutter_basics/demo/i18n/map/cg_localizations.dart';
 
 void main() => runApp(App());
 
@@ -19,6 +21,19 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // locale: Locale('en','US'),
+      localeResolutionCallback: (Locale locale,Iterable<Locale> supportedLocales){
+        return Locale('zh','CN');
+      },
+      localizationsDelegates: [
+        CGLocalizationsDelegate(),
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en','US'),
+        Locale('zh','CN'),
+      ],
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primarySwatch: Colors.blue,
@@ -27,7 +42,7 @@ class App extends StatelessWidget {
           accentColor: Color.fromRGBO(3, 54, 255, 1.0),
         ),
       // home: NavigatorDemo(),
-      initialRoute: '/animation',
+      initialRoute: '/i18n',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(
@@ -38,6 +53,7 @@ class App extends StatelessWidget {
 
         '/http':(context)=>HttpDemo(),
         '/animation':(context)=>AnimationDemo(),
+        '/i18n':(context)=>I18nDemo(),
       },
     );
   }
