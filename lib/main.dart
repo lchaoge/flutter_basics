@@ -5,7 +5,6 @@ import 'package:flutter_basics/demo/bottom_navigation_bar_demo.dart';
 import 'package:flutter_basics/demo/basic_demo.dart';
 import 'package:flutter_basics/demo/drawer_demo.dart';
 import 'package:flutter_basics/demo/layout_demo.dart';
-import 'package:flutter_basics/demo/view_demo.dart';
 import 'package:flutter_basics/demo/sliver_demo.dart';
 import 'package:flutter_basics/demo/navigator_demo.dart';
 import 'package:flutter_basics/demo/form_demo.dart';
@@ -14,6 +13,8 @@ import 'package:flutter_basics/demo/http/http_demo.dart';
 import 'package:flutter_basics/demo/animation/animation_demo.dart';
 import 'package:flutter_basics/demo/i18n/i18n_demo.dart';
 import 'package:flutter_basics/demo/i18n/map/cg_localizations.dart';
+import 'package:flutter_basics/demo/test/test_demo.dart';
+
 
 void main() => runApp(App());
 
@@ -42,7 +43,7 @@ class App extends StatelessWidget {
           accentColor: Color.fromRGBO(3, 54, 255, 1.0),
         ),
       // home: NavigatorDemo(),
-      initialRoute: '/i18n',
+      initialRoute: '/test',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(
@@ -54,6 +55,7 @@ class App extends StatelessWidget {
         '/http':(context)=>HttpDemo(),
         '/animation':(context)=>AnimationDemo(),
         '/i18n':(context)=>I18nDemo(),
+        '/test':(context)=>TestDemo(),
       },
     );
   }
