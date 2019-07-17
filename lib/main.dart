@@ -15,6 +15,8 @@ import 'package:flutter_basics/demo/animation/animation_demo.dart';
 import 'package:flutter_basics/demo/i18n/i18n_demo.dart';
 import 'package:flutter_basics/demo/i18n/map/cg_localizations.dart';
 import 'package:flutter_basics/demo/test/test_demo.dart';
+import 'package:flutter_basics/demo/stream/stream_demo.dart';
+import 'package:flutter_basics/demo/bloc/bloc_demo.dart';
 
 
 void main() => runApp(App());
@@ -44,7 +46,7 @@ class App extends StatelessWidget {
           accentColor: Color.fromRGBO(3, 54, 255, 1.0),
         ),
       // home: NavigatorDemo(),
-      initialRoute: '/state-management',
+      initialRoute: '/bloc',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(
@@ -53,6 +55,8 @@ class App extends StatelessWidget {
         '/form':(context)=>FormDemo(),
         '/mdc':(context)=>MaterialComponents(),
         '/state-management':(context)=>StateManagementDemo(),
+        '/stream':(context)=>StreamDemo(),
+        '/bloc':(context)=>BlocDemo(),
 
         '/http':(context)=>HttpDemo(),
         '/animation':(context)=>AnimationDemo(),
